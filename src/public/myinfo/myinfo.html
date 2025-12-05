@@ -1,0 +1,70 @@
+<div class="container">
+  <h2 class="text-center">My Info</h2>
+
+  <div ng-if="!myinfoCtrl.userInfo">
+    <p class="text-center">
+      Not Signed Up Yet.
+      <a ui-sref="public.signup">Sign up Now!</a>
+    </p>
+  </div>
+
+  <div ng-if="myinfoCtrl.userInfo">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Your Information</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-sm-4 text-primary"><strong>First Name:</strong></div>
+          <div class="col-sm-8 text-muted">
+            {{ myinfoCtrl.userInfo.firstName }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 text-primary"><strong>Last Name:</strong></div>
+          <div class="col-sm-8 text-muted">
+            {{ myinfoCtrl.userInfo.lastName }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 text-primary"><strong>Email:</strong></div>
+          <div class="col-sm-8 text-muted">{{ myinfoCtrl.userInfo.email }}</div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 text-primary"><strong>Phone:</strong></div>
+          <div class="col-sm-8 text-muted">{{ myinfoCtrl.userInfo.phone }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Your Favorite Menu Item</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="menu-item-photo">
+              <div>{{ myinfoCtrl.userInfo.favoriteItem.short_name }}</div>
+              <img
+                class="img-responsive"
+                width="250"
+                height="150"
+                ng-src="images/menu/{{ myinfoCtrl.basePath }}/{{ myinfoCtrl.userInfo.favoriteItem.short_name }}.jpg"
+                alt="{{ myinfoCtrl.userInfo.favoriteItem.name }}"
+              />
+            </div>
+          </div>
+          <div class="col-sm-7">
+            <h3 class="text-primary">
+              {{ myinfoCtrl.userInfo.favoriteItem.name }}
+            </h3>
+            <p class="text-secondary">
+              {{ myinfoCtrl.userInfo.favoriteItem.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

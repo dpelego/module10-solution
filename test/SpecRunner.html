@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Module 10 - Jasmine Spec Runner</title>
+
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../lib/jasmine-2.4.1/jasmine_favicon.png"
+    />
+    <link rel="stylesheet" href="../lib/jasmine-2.4.1/jasmine.css" />
+
+    <script src="../lib/jasmine-2.4.1/jasmine.js"></script>
+    <script src="../lib/jasmine-2.4.1/jasmine-html.js"></script>
+    <script src="../lib/jasmine-2.4.1/boot.js"></script>
+
+    <!-- Angular and Angular Mocks -->
+    <script src="../lib/angular.min.js"></script>
+    <script src="../lib/angular-mocks.js"></script>
+
+    <!-- Load UI Router -->
+    <script src="../lib/angular-ui-router.min.js"></script>
+
+    <!-- Application Modules -->
+    <script src="../src/restaurant.module.js"></script>
+    <script src="../src/common/common.module.js"></script>
+    <script src="../src/public/public.module.js"></script>
+
+    <!-- Application Services - If you don't add the interceptor you'll spend a long time frustrated and debugging. Ask me how I know :( -->
+    <script src="../src/common/menu.service.js"></script>
+    <script src="../src/common/loading/loading.component.js"></script>
+    <script src="../src/common/loading/loading.interceptor.js"></script>
+
+    <!-- Test Specs -->
+    <script src="spec/menuitem.validation.spec.js"></script>
+  </head>
+
+  <body></body>
+</html>
